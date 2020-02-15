@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinja Demo2</title>
+</head>
+<body>
+    <h1>Fruits are {{fruits}}</h1>
+    <ol>
+        {% if fruits %}
+        {% for fruit in fruits %}
+        <h2><li>{{fruit}}</li></h2>    
+      {% endfor %}
+        {% else %}
+          <h2>No Fruits</h2>
+        {% endif %}
+    </ol>
+    <table border="1pt">
+        
+        {% if fruits %}
+        <tr><th>Fruit Name</th></tr>
+        {% for fruit in fruits %}
+        <tr>
+            <td>{{fruit}}</td>
+        </tr> 
+        {% endfor %}
+        {% endif %}
+            
+    </table>
+</body>
+</html>
